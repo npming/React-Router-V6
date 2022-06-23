@@ -1,0 +1,12 @@
+.about-wrapper ul {
+    text-align: left;
+  }
+  .about-wrapper ul li {
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+  .about-wrapper h3{
+    color: #929292;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
