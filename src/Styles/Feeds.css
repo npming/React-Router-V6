@@ -1,3 +1,6 @@
+.feeds-wrapper{
+    position: relative;
+}
 .feeds-wrapper .heading {
     color: #929292;
     font-size: 22px;
@@ -13,7 +16,10 @@
 }
 .feeds-wrapper .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
+.feeds-list li>a{
+    text-decoration: none;
+}
 ul.feeds-list {
     list-style-type: none;
     padding: 0;
@@ -51,4 +57,47 @@ ul.feeds-list {
     color: #8d8d8d;
     margin-top: 80px;
     letter-spacing: 1px;
-  }
+}
+.FeedDetailPage {
+    max-height: 520px;
+    max-width: 630px;
+    background: #fff;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 55%);
+    transition: 0.3s;
+    padding: 0 0 10px 0;
+    border-radius: 15px;
+}
+.FeedDetailPage img{
+    max-width: 600px;
+    border-radius: 17px;
+}
+.FeedDetailPage .card-description {
+    font-size: 14px;
+    padding: 0 12px;
+    color: #464646;
+}
+.FeedDetailPage .card-title{
+    color: #0087a6;
+    font-weight: 500;
+}
+.FeedHeader {
+    margin: 15px;
+    display: inline-block;
+    width: 91%;
+    letter-spacing: 1px;
+    color: #464646;
+}
+.FeedHeader .close{
+    float: right;
+}
+.FeedHeader p {
+    float: left;
+    margin: 0;
+    font-weight: 400;
+}

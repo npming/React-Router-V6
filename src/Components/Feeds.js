@@ -1,10 +1,12 @@
 import React from 'react'
+import { Outlet, NavLink, Link } from 'react-router-dom'
 import '../Styles/Feeds.css'
 
 function Feeds() {
 
   const [state, setState] = React.useState([])
   const [loading, setLoading] = React.useState(true)
+  const [OutletData, setOutletData] = React.useState(null)
 
   React.useEffect(()=>{
       if(!state.length){
@@ -34,14 +36,16 @@ function Feeds() {
             {
               state.map((item, index) => {
                 return (
-                  <li key={index}>
-                    <div className='card'>
-                      <img src={item.urlToImage}/>
-                      <p className='card-title'>
-                        {item.author ? item.author : 'Unknown source'}
-                      </p>
-                      <p className='card-description'>{item.description}</p>
-                    </div>
+                  <li key={index} onClick={()=>setOutletData(item)}>
+                    <Link to="feed">
+                      <div className='card'>
+                        <img src={item.urlToImage}/>
+                        <p className='card-title'>
+                          {item.author ? item.author : 'Unknown source'}
+                        </p>
+                        <p className='card-description'>{item.description}</p>
+                      </div>
+                    </Link>
                   </li>
                 )
               })
@@ -51,6 +55,7 @@ function Feeds() {
             <h3 className='feeds-loader'>Loading please wait....</h3>
         : "No data available, Try again later"
       }
+      <Outlet context={[OutletData, setOutletData]} />
     </div>
   )
 }
