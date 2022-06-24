@@ -28,7 +28,8 @@ function Feeds() {
   },[state])
 
   return (
-    <div className='feeds-wrapper'>
+    <div className={'feeds-wrapper'}>
+      { OutletData ? <div className='overlay'></div> : null }
       <h3 className='heading'>Feeds</h3>
       {
         loading === false && state.length ? 

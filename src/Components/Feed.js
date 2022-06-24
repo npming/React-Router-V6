@@ -12,13 +12,18 @@ function Feed() {
     }
   }, [])
 
+  const handleClose = () => {
+    navigate(-1)
+    setFeedData(null)
+  }
+
   return (
     <div className='FeedDetailPage'>
       { feedData ? 
         <>
         <div className='FeedHeader'>
           <p>Feed details</p>
-          <div className='close' onClick={() => navigate(-1)}>
+          <div className='close' onClick={()=>handleClose()}>
             <span>X</span> close
           </div>
         </div>

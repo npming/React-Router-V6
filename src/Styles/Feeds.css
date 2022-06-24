@@ -95,9 +95,24 @@ ul.feeds-list {
 }
 .FeedHeader .close{
     float: right;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #444;
+    padding: 5px;
+    border-radius: 8px;
 }
 .FeedHeader p {
     float: left;
     margin: 0;
-    font-weight: 400;
+    font-weight: bold;
+    padding: 5px;
+}
+.overlay {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
 }
