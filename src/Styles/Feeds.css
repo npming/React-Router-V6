@@ -59,7 +59,7 @@ ul.feeds-list {
     letter-spacing: 1px;
 }
 .FeedDetailPage {
-    max-height: 520px;
+    max-height: 560px;
     max-width: 630px;
     background: #fff;
     position: fixed;
